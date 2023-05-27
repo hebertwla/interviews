@@ -1,0 +1,15 @@
+import  requests
+import json
+
+cotacoes = requests.get("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL")
+cotacoes = cotacoes.json()
+cotacoes_dolar = cotacoes['USDBRL']["ask"]
+cotacoes_euro = cotacoes['EURBRL']["bid"]
+cotacoes_bitcoin = cotacoes['BTCBRL']["bid"]
+
+print(cotacoes_dolar)
+print(cotacoes_euro)
+print(cotacoes_bitcoin)
+
+
+
